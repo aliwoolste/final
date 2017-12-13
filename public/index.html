@@ -34,11 +34,12 @@
 <div class="container" ng-app="scheduleApp" ng-controller="mainController">
 
   <div class="page-header text-center">
-    <h1>Date Night Scheduling</h1>
+    <h1>Date Night Scheduling for Bertha</h1>
+	<img src="http://images.clipartpanda.com/sad-girl-stick-figure-9TzxMAbec.gif" alt="Me">
   </div>
 
-  <h1>{{email}}</h1>
-
+  <h2>{{email}}</h2>
+<p> Select a time to schedule a date with me! </p>
   <!-- were doing one day with 1 time slot for simplicity -->
   <!-- we'll use angular's ng-repeat in a bit to get the other days and times -->
  <div class="row times">
@@ -49,11 +50,10 @@
 
     <div class="time-slot" ng-repeat="slot in day.slots">
 
-      <input type="checkbox" id="{{ day.name }}-{{ $index }}" ng-model="slot.booked" ng-disabled="slot.booked" ng-click= "book(day, slot)">
+      <input type="checkbox" id="{{ day.name }}-{{ $index }}" ng-model="slot.booked" ng-disabled="slot.booked" ng-click= "book(day)">
 
       <label for="{{ day.name }}-{{ $index }}">{{ slot.time }}<br>
         <span ng-if="slot.booked">Booked</span>
-        <span ng-if="slot.booked">{{slot.email}}</span>
         <span ng-if="!slot.booked">Available</span>
       </label>
 
@@ -62,9 +62,9 @@
 
 </div>
 
-<p class="text-center">
+<!--<p class="text-center">
     <a href="#" class="btn btn-primary" ng-click="reset()">Reset</a>
-  </p>
+  </p>-->
 
 </div>
 </body>
