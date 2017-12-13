@@ -12,7 +12,95 @@ function($scope, $firebaseArray) {
 	$scope.email = localStorage.email;
 	console.log($scope.email);
     $scope.reset = function() {
-
+        $scope.days.$set({
+          Friday: {
+            name: 'Monday',
+            slots: {
+              900: {
+                time: '9:00pm',
+                booked: false
+              },
+              0110: {
+                time: '11:00pm',
+                booked: false
+              },
+              100: {
+                time: '1:00pm',
+                booked: false
+              },
+              300: {
+                time: '3:00pm',
+                booked: false
+              },
+              500: {
+                time: '5:00pm',
+                booked: false
+              },
+              700: {
+                time: '7:00pm',
+                booked: false
+              }
+        	  }
+          },
+          Saturday: {
+            name: 'Tuesday',
+            slots: {
+              900: {
+                time: '9:00pm',
+                booked: false
+              },
+              0110: {
+                time: '11:00pm',
+                booked: false
+              },
+              100: {
+                time: '1:00pm',
+                booked: false
+              },
+              300: {
+                time: '3:00pm',
+                booked: false
+              },
+              500: {
+                time: '5:00pm',
+                booked: false
+              },
+              700: {
+                time: '7:00pm',
+                booked: false
+              }
+        	  }
+          },
+          Sunday: {
+            name: 'Wednesday',
+            slots: {
+              900: {
+                time: '9:00pm',
+                booked: false
+              },
+              0110: {
+                time: '11:00pm',
+                booked: false
+              },
+              100: {
+                time: '1:00pm',
+                booked: false
+              },
+              300: {
+                time: '3:00pm',
+                booked: false
+              },
+              500: {
+                time: '5:00pm',
+                booked: false
+              },
+              700: {
+                time: '7:00pm',
+                booked: false
+              }
+        	  }
+          }
+        });
     }
     $scope.book = function(day, slot){
       //console.log($scope.days);
