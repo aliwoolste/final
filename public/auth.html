@@ -114,7 +114,6 @@ var config = {
         if (user) {
           // User is signed in.
           var displayName = user.displayName;
-          $scope.username = displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
           var photoURL = user.photoURL;
@@ -122,6 +121,7 @@ var config = {
           var uid = user.uid;
           var providerData = user.providerData;
           // [START_EXCLUDE]
+          document.getElementById('username').innerHTML = user.displayName;
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
@@ -130,6 +130,7 @@ var config = {
         } else {
           // User is signed out.
           // [START_EXCLUDE]
+          document.getElementById('username').innerHTML = "Not signed in";
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
           document.getElementById('quickstart-sign-in').textContent = 'Sign in with GitHub';
           document.getElementById('quickstart-account-details').textContent = 'null';
@@ -182,6 +183,7 @@ var config = {
             <pre><code id="quickstart-account-details">null</code></pre>
             <div>GitHub OAuth Access Token:</div>
             <pre><code id="quickstart-oauthtoken">null</code></pre>
+            <h1 id="username" ng-model="username"></h1>
           </div>
         </div>
       </div>
