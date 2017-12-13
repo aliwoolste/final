@@ -121,6 +121,7 @@ var config = {
           var uid = user.uid;
           var providerData = user.providerData;
           // [START_EXCLUDE]
+          console.log("Username in script: "+user.displayName);
           document.getElementById('username').innerHTML = user.displayName;
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
@@ -130,6 +131,7 @@ var config = {
         } else {
           // User is signed out.
           // [START_EXCLUDE]
+          console.log("Username in script after sign out: "+user.displayName);
           document.getElementById('username').innerHTML = "Not signed in";
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
           document.getElementById('quickstart-sign-in').textContent = 'Sign in with GitHub';
