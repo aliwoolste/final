@@ -5,12 +5,12 @@ var myApp = angular.module("scheduleApp",["firebase"]);
 myApp.controller("mainController", ["$scope","$firebaseArray",
 function($scope, $firebaseArray) {
     var ref = firebase.database().ref().child("days");
-    var refEmail = firebase.database().ref().child("email");
-    $scope.emails = $firebaseArray(refEmail);
+    // var refEmail = firebase.database().ref().child("email");
+    // $scope.emails = $firebaseArray(refEmail);
     $scope.days = $firebaseArray(ref);
     console.log($scope.days);
-	var myEmail = localStorage.email;
-	console.log(myEmail);
+	$scope.email = localStorage.email;
+	console.log($scope.email);
     $scope.reset = function() {
 
     }
@@ -23,10 +23,10 @@ function($scope, $firebaseArray) {
       console.log($scope.days[day.name]);
     }
 
-    $scope.saveEmail = function(email) {
-        console.log("Email from save email f(x)" +email);
-        $scope.emails.$add(email);
-    }
+    // $scope.saveEmail = function(email) {
+    //     console.log("Email from save email f(x)" +email);
+    //     $scope.emails.$add(email);
+    // }
 
 
 }]);
