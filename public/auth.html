@@ -125,7 +125,7 @@ var config = {
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-	 window.location = 'index.html'
+	 //window.location = 'index.html'
           // [END_EXCLUDE]
         } else {
           // User is signed out.
@@ -183,7 +183,7 @@ var config = {
             <pre><code id="quickstart-account-details">null</code></pre>
             <div>GitHub OAuth Access Token:</div>
             <pre><code id="quickstart-oauthtoken">null</code></pre>
-            <h1 id="username" ng-model="username"></h1>
+            <h1 id="username" ng-model="username">{{username}}</h1>
           </div>
         </div>
       </div>
