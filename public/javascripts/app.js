@@ -14,11 +14,13 @@ function($scope, $firebaseArray) {
     $scope.reset = function() {
 
     }
-    $scope.book = function(day){
+    $scope.book = function(day, slot){
       //console.log($scope.days);
       console.log(day);
       //$scope.days[day.name].slot.booked = true;
       //$scope.days[day.name] = day;
+      console.log("day.slots[slot]: "+day.slots[slot]);
+      day.slots[slot].email = $scope.email;
       $scope.days.$save(day);
       console.log($scope.days[day.name]);
     }
