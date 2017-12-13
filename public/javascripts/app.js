@@ -12,7 +12,7 @@ function($scope, $firebaseArray) {
 	$scope.email = localStorage.email;
 	console.log($scope.email);
     $scope.reset = function() {
-        $scope.days.$set({
+        $scope.days.$save({
           Friday: {
             name: 'Monday',
             slots: {
