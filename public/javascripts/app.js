@@ -18,11 +18,12 @@ function($scope, $firebaseArray) {
       //console.log($scope.days);
       console.log("day: "+day);
       console.log("slot: " + slot);
-      console.log("email: " + $scope.email);
+      //console.log("email: " + $scope.email);
+      //console.log("email from database: "+ )
       //$scope.days[day.name].slot.booked = true;
       //$scope.days[day.name] = day;
-      console.log("day.slots[slot]: "+day.slots[slot]);
-      day.slots[slot].email = $scope.email;
+      //console.log("day.slots[slot]: "+day.slots[slot]);
+      //day.slots[slot].email = $scope.email;
       $scope.days.$save(day);
       console.log($scope.days[day.name]);
     }
