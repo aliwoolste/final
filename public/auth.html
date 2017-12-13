@@ -121,8 +121,8 @@ var config = {
           var uid = user.uid;
           var providerData = user.providerData;
           // [START_EXCLUDE]
-          console.log("Username in script: "+user.displayName);
-          document.getElementById('username').innerHTML = user.displayName;
+          console.log("email in script: "+user.email);
+          document.getElementById('email').innerHTML = user.email;
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
@@ -131,8 +131,8 @@ var config = {
         } else {
           // User is signed out.
           // [START_EXCLUDE]
-          console.log("Username in script after sign out: "+user.displayName);
-          document.getElementById('username').innerHTML = "Not signed in";
+          console.log("email in script after sign out: "+user.email);
+          document.getElementById('email').innerHTML = "Not signed in";
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
           document.getElementById('quickstart-sign-in').textContent = 'Sign in with GitHub';
           document.getElementById('quickstart-account-details').textContent = 'null';
@@ -185,7 +185,7 @@ var config = {
             <pre><code id="quickstart-account-details">null</code></pre>
             <div>GitHub OAuth Access Token:</div>
             <pre><code id="quickstart-oauthtoken">null</code></pre>
-            <h1 id="username" ng-model="username">{{username}}</h1>
+            <h1 id="email" ng-model="email">{{email}}</h1>
           </div>
         </div>
       </div>
