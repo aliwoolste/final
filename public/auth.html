@@ -22,7 +22,7 @@ limitations under the License.
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
 
   <!-- AngularJS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -120,18 +120,19 @@ var config = {
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
+	localStorage.email = email;
           // [START_EXCLUDE]
           console.log("email in script: "+user.email);
           document.getElementById('email').innerHTML = user.email;
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-	 // window.location = 'index.html'
+	  window.location = 'index.html'
           // [END_EXCLUDE]
         } else {
           // User is signed out.
           // [START_EXCLUDE]
-          console.log("email in script after sign out: "+user.email);
+          //console.log("email in script after sign out: "+user.email);
           document.getElementById('email').innerHTML = "Not signed in";
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
           document.getElementById('quickstart-sign-in').textContent = 'Sign in with GitHub';

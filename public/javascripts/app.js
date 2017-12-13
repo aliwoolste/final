@@ -9,7 +9,8 @@ function($scope, $firebaseArray) {
     $scope.emails = $firebaseArray(refEmail);
     $scope.days = $firebaseArray(ref);
     console.log($scope.days);
-
+	var myEmail = localStorage.email;
+	console.log(myEmail);
     $scope.reset = function() {
 
     }
