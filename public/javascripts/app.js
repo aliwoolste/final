@@ -16,7 +16,9 @@ function($scope, $firebaseArray) {
     }
     $scope.book = function(day, slot){
       //console.log($scope.days);
-      console.log(day);
+      console.log("day: "+day);
+      console.log("slot: " + slot);
+      console.log("email: " + $scope.email);
       //$scope.days[day.name].slot.booked = true;
       //$scope.days[day.name] = day;
       console.log("day.slots[slot]: "+day.slots[slot]);
