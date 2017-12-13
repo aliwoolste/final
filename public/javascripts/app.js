@@ -6,6 +6,7 @@ myApp.controller("mainController", ["$scope","$firebaseArray",
 function($scope, $firebaseArray) {
     var ref = firebase.database().ref().child("days");
     $scope.days = $firebaseArray(ref);
+    $scope.name = "";
     console.log($scope.days);
 
 

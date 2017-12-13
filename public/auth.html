@@ -38,8 +38,10 @@ var config = {
   };
   firebase.initializeApp(config);
 </script>
-
+<script src="javascripts/app.js"></script>
   <script type="text/javascript">
+
+
     /**
      * Function called when clicking the Login/Logout button.
      */
@@ -122,7 +124,8 @@ var config = {
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-	 window.location = 'index.html'
+          $scope.name = displayName;
+	         window.location = 'index.html'
           // [END_EXCLUDE]
         } else {
           // User is signed out.
