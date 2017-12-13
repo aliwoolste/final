@@ -7,7 +7,7 @@ function($scope, $firebaseArray) {
     var ref = firebase.database().ref().child("days");
     $scope.days = $firebaseArray(ref);
     console.log($scope.days);
-
+    $scope.username = 'test';
 
     $scope.reset = function() {
 
